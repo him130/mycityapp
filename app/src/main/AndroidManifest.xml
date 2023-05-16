@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.webandappdevelopment.serviceshop">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ServiceShop"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".explore.VidoeEnlargeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ServiceProviderProfile.ChangePasswordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ManagePhotos.FullSizeImageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProviderList.BookNowActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".home.SearchActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ServiceProviderProfile.EditProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ServiceProviderProfile.ManageProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ServiceProviderProfile.VerifyProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ManagePhotos.ManagePhotosActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.AddServicesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceHistory.ServiceHistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".profile.PrivacyPolicyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".profile.SupportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".profile.EditUserProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ServiceArea.ServiceAreaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ServiceRequest.ServiceRequestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProviderList.ServiceProviderDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProviderList.ServiceProviderListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.ServiceProviderHomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".ServiceProvider.UploadDocumentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".LoginMech.ServiceProviderRegistrationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".LoginMech.CustomerRegistrationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".LoginMech.RegistrationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".LoginMech.ForgetPasswordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".LoginMech.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".LoginMech.OtpVerifyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ServiceShop.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ServiceShop.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

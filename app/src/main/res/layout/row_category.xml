@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/row_tvService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/search_grey_bg"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
+        android:fontFamily="@font/abeezee"
+        android:textSize="14sp"/>
+
+    <ImageView
+        android:id="@+id/row_ivServiceDelete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="@string/app_name"/>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/rowPhotos_ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:padding="6dp"
+        app:shapeAppearanceOverlay="@style/round_corner"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/black"
+        android:scaleType="centerCrop"/>
+</RelativeLayout>

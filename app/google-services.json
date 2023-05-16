@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "169188124731",
+    "project_id": "myapp-29689",
+    "storage_bucket": "myapp-29689.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169188124731:android:85f9f0763762d43315541e",
+        "android_client_info": {
+          "package_name": "com.webandappdevelopment.serviceshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169188124731-4mrokg215q04s91jhhbo7vuds5v6bc9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ_P79ZUWkY3VznOwRT6ZGVp-2BW2iAf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169188124731-4mrokg215q04s91jhhbo7vuds5v6bc9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

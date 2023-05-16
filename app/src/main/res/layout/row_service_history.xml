@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/rowServiceHistory_llCustomerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:background="@drawable/date_round_bg">
+
+                        <TextView
+                            android:id="@+id/rowServiceHistory_tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:fontFamily="@font/abeezee"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/rowServiceHistory_tvMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Oct 22"
+                            android:fontFamily="@font/abeezee"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:gravity="center_horizontal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rowServiceHistory_tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawablePadding="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:text="Service Provider Name"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/rowServiceHistory_tvContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/abeezee"
+                            android:drawableStart="@drawable/ic_call"
+                            android:drawablePadding="5dp"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:text="+91 7878787878"
+                            android:gravity="center_vertical"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/rowService_btnView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/red_round_bg"
+                            android:paddingHorizontal="10dp"
+                            android:text="Call"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/abeezee" />
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/rowServiceHistory_tvCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_experience"
+                        android:drawablePadding="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:text="Category"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rowServiceHistory_tvService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_service"
+                    android:drawablePadding="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:text="Fan Installation"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/rowServiceHistory_tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_address"
+                    android:drawablePadding="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:text="Address Here"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/rowServiceHistory_tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawablePadding="5dp"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/theme_red"
+                    android:textSize="12dp"
+                    android:text="Status: Pending"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:background="@drawable/red_border_white_bg"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rowServiceHistory_btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/red_round_bg"
+                    android:fontFamily="@font/abeezee"
+                    android:minHeight="0dp"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/cancel_request"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_gravity="end"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

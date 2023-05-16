@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ececec"
+    android:paddingVertical="10dp"
+    tools:context=".ServiceProviderList.ServiceProviderDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/spDetails_llInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/white_round_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/rowServiceProviderDetails_ivImage"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:maxWidth="150dp"
+                        android:minWidth="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_service_provider"
+                        android:contentDescription="@string/app_name"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="250dp"
+                    android:fontFamily="@font/abeezee"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/theme_red"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_age"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvMaritalStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_marital_status"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_experience"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvMyCityDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_history"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spDetails_llContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/white_round_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spDetails_llInfo">
+
+            <TextView
+                android:id="@+id/rowServiceProviderDetails_tvContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/rowServiceProviderDetails_tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/rowServiceProviderDetails_tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:drawableStart="@drawable/ic_address"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <!--<androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rowServiceProviderDetails_btnCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/red_round_bg"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp"
+                android:text="@string/call_now"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/abeezee" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rowServiceProviderList_btnBookNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/red_border_white_bg"
+                    android:fontFamily="@font/abeezee"
+                    android:minHeight="0dp"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="5dp"
+                    android:text="@string/book_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/theme_red"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rowServiceProviderList_btnCallNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/white_border_red_bg"
+                    android:fontFamily="@font/abeezee"
+                    android:minHeight="0dp"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="10dp"
+                    android:drawableStart="@drawable/ic_call"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/white"
+                    android:text="@string/call_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spDetails_llServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/white_round_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spDetails_llContact">
+
+            <TextView
+                android:id="@+id/rowServiceProviderDetails_tvTitleServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:drawableStart="@drawable/ic_service"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="@string/services_offered"/>
+
+            <TextView
+                android:id="@+id/rowServiceProviderDetails_tvServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spDetails_llAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/white_round_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spDetails_llServices">
+
+            <TextView
+                android:id="@+id/rowServiceProviderDetails_tvTitleAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:drawableStart="@drawable/ic_marital_status"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="@string/about"/>
+
+            <TextView
+                android:id="@+id/rowServiceProviderDetails_tvAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spDetails_llRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/white_round_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spDetails_llAbout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_rating"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvStar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_star_yellow"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvStar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_star_yellow"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvStar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_star_yellow"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvStar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_star_half"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvStar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_star_grey"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:id="@+id/rowServiceProviderDetails_ivReviewImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_service_provider"
+                    android:contentDescription="@string/app_name"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvReviewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:text="Some Customer"
+                    android:layout_gravity="start"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_yellow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_yellow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_yellow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_grey"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_grey"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rowServiceProviderDetails_tvReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:text="Some Customer has already revied good work of the service provider as 3 star. he was good at work."
+            android:layout_gravity="left"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:id="@+id/rowServiceProviderDetails_ivReviewImage1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_service_provider"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rowServiceProviderDetails_tvReviewName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:text="Other Customer"
+                    android:layout_gravity="left"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_yellow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_yellow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_yellow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_yellow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/rowServiceProviderDetails_tvReviewStar51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abeezee"
+                        android:drawableStart="@drawable/ic_star_grey"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rowServiceProviderDetails_tvReview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abeezee"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:text="Some Customer has already revied good work of the service provider as 3 star. he was good at work."
+            android:layout_gravity="left"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/rowServiceProviderDetails_btnViewAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_grey_bg"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp"
+                android:text="View All Review"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/abeezee" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spDetails_llImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:background="@drawable/white_round_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spDetails_llRating">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/spDetails_rvImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/managePhotos_llButtons"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/spDetails_tvNoImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_images_found"
+                android:fontFamily="@font/abeezee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/rowServiceProviderDetails_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_grey"
+            android:translationZ="@dimen/cardview_compat_inset_shadow"
+            android:visibility="gone"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

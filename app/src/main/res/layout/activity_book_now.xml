@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProviderList.BookNowActivity"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bookNow_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_yellow"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/book_now"
+            android:fontFamily="@font/abeezee"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/bookNow_tvTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/please_fill_below_content_to_book_your_service_provider_now"
+        android:textSize="18sp"
+        android:fontFamily="@font/abeezee"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookNow_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookNow_tvTextContent">
+
+        <EditText
+            android:id="@+id/bookNow_etName"
+            android:autofillHints="username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/grey_round_bg"
+            android:hint="@string/name_compulsory"
+            android:textColorHint="@color/hint_color"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:drawableEnd="@drawable/ic_edit_profile"
+            android:textSize="14sp"
+            android:fontFamily="@font/abeezee"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:autofillHints="phone"
+            android:id="@+id/bookNow_etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/grey_round_bg"
+            android:hint="@string/mobile_number_compulsory"
+            android:textColorHint="@color/hint_color"
+            android:inputType="phone"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:drawableEnd="@drawable/ic_phone"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/abeezee"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:autofillHints="postalAddress"
+            android:id="@+id/bookNow_etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/grey_round_bg"
+            android:hint="@string/address_compulsory"
+            android:textColorHint="@color/hint_color"
+            android:inputType="textMultiLine"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:drawableEnd="@drawable/ic_address"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/abeezee"
+            android:importantForAutofill="no"
+            android:gravity="start" />
+
+        <FrameLayout
+            android:id="@+id/bookNow_flCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="start"
+            android:background="@drawable/grey_round_bg"
+            android:drawableEnd="@drawable/ic_pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etAddress">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/bookNow_spinnerCity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/grey_round_bg"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:theme="@style/Theme.ServiceShop.SpinnerItemStyleStart" />
+        </FrameLayout>
+
+<!--        <EditText-->
+<!--            android:id="@+id/bookNow_etCity"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:background="@drawable/grey_round_bg"-->
+<!--            android:hint="@string/city_compulsory"-->
+<!--            android:inputType="text"-->
+<!--            android:paddingHorizontal="15dp"-->
+<!--            android:paddingVertical="10dp"-->
+<!--            android:drawableEnd="@drawable/ic_address"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:fontFamily="@font/abeezee"-->
+<!--            android:importantForAutofill="no" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/bookNow_etState"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:background="@drawable/grey_round_bg"-->
+<!--            android:hint="@string/state_compulsory"-->
+<!--            android:inputType="text"-->
+<!--            android:paddingHorizontal="15dp"-->
+<!--            android:paddingVertical="10dp"-->
+<!--            android:drawableEnd="@drawable/ic_address"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="14sp"-->
+<!--            android:fontFamily="@font/abeezee"-->
+<!--            android:importantForAutofill="no" />-->
+
+        <EditText
+            android:autofillHints="name"
+            android:id="@+id/bookNow_etServiceRequest"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/grey_round_bg"
+            android:hint="@string/service_request_compulsory"
+            android:textColorHint="@color/hint_color"
+            android:inputType="textMultiLine"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:drawableEnd="@drawable/ic_service"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/abeezee"
+            android:importantForAutofill="no"
+            android:gravity="start"/>
+
+        <EditText
+            android:autofillHints="creditCardExpirationDate"
+            android:id="@+id/bookNow_etDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/grey_round_bg"
+            android:hint="@string/preferred_date_compulsory"
+            android:textColorHint="@color/hint_color"
+            android:inputType="date"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:drawableEnd="@drawable/ic_age"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/abeezee"
+            android:importantForAutofill="no" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bookNow_btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/red_round_bg"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:text="@string/book_now"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/abeezee"/>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/bookNow_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_grey"
+        android:translationZ="@dimen/cardview_compat_inset_shadow"
+        android:visibility="gone"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

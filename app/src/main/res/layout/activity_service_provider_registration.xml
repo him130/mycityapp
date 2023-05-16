@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/serviceProviderRegistration_rootLayout"
+    tools:context=".LoginMech.ServiceProviderRegistrationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/serviceProviderRegistration_ivLogo"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/final_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name" />
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="@string/name_compulsory"
+            android:textColorHint="#716F6F"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_ivLogo"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="@string/mobile_number_compulsory"
+            android:inputType="phone"
+            android:textColorHint="#716F6F"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etName"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="@string/email_compulsory"
+            android:textColorHint="#716F6F"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etMobile"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="@string/age"
+            android:textColorHint="#716F6F"
+            android:inputType="number"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etEmail"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="Adhar Number"
+            android:textColorHint="#716F6F"
+            android:inputType="text"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etAge"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="@string/address"
+            android:textColorHint="#716F6F"
+            android:inputType="text"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etExperience"
+            android:importantForAutofill="no" />
+
+        <FrameLayout
+            android:id="@+id/serviceProviderRegistration_flCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etAddress">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/serviceProviderRegistration_spinnerCity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_round_bg"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:theme="@style/Theme.ServiceShop.SpinnerItemStyle" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/serviceProviderRegistration_flCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_flCity">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/serviceProviderRegistration_spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_round_bg"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp"
+                android:textColor="@color/black"
+                android:theme="@style/Theme.ServiceShop.SpinnerItemStyle" />
+        </FrameLayout>
+
+        <RadioGroup
+            android:id="@+id/serviceProviderRegistration_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/white_round_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_flCategory">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/marital_status"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/abeezee"/>
+
+            <RadioButton
+                android:id="@+id/spRegistration_rbSingle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/single"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginStart="5dp"/>
+
+            <RadioButton
+                android:id="@+id/spRegistration_rbMarried"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/married"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginStart="5dp"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="@string/password"
+            android:textColorHint="#716F6F"
+            android:inputType="textPassword"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_radioGroup"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/serviceProviderRegistration_etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_round_bg"
+            android:hint="@string/confirm_password"
+            android:textColorHint="#716F6F"
+            android:inputType="textPassword"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etPassword"
+            android:importantForAutofill="no" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/serviceProviderRegistration_btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/red_round_bg"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:text="@string/register"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/abeezee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_etConfirmPassword" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderRegistration_btnRegister">
+
+            <TextView
+                android:id="@+id/serviceProviderRegistration_tvTextContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registration_now_message"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/abeezee" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/serviceProviderRegistration_btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/login_here"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_red"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/serviceProviderRegistration_tvTextContent"
+                app:layout_constraintTop_toBottomOf="@+id/login_btnLogin" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/serviceProviderRegistration_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_grey"
+            android:translationZ="@dimen/cardview_compat_inset_shadow"
+            android:visibility="gone"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceProvider.ServiceProviderHomeActivity"
+    android:background="#ececec">
+
+    <LinearLayout
+        android:id="@+id/spHome_llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/profile_yellow_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_gravity="center">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/spHome_ivProfileImg"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:padding="6dp"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/circular"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/spHome_tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="@font/abeezee"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/spHome_tvContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_call"
+                    android:drawableTint="@color/theme_red"
+                    android:drawablePadding="2dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/spHome_tvCityState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:fontFamily="@font/abeezee"
+                    android:drawableStart="@drawable/ic_pin"
+                    android:drawableTint="@color/theme_red"
+                    android:drawablePadding="2dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/spHome_tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:text="@string/online"/>
+
+                <Switch
+                    android:id="@+id/spHome_switchStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.25"
+                    android:scaleY="1.25"
+                    android:theme="@style/Theme.ServiceShop.Switch"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spHome_llHeader"
+        android:layout_marginTop="-80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="4"
+                android:layout_marginStart="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spHome_btnServiceRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gradient_background"
+                    android:drawableTop="@drawable/ic_service_request"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/theme_red"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="20dp"
+                    android:text="@string/service_request"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spHome_btnAddCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gradient_background"
+                    android:drawableTop="@drawable/ic_add_category"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/theme_red"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="20dp"
+                    android:text="@string/add_category"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spHome_btnManageProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gradient_background"
+                    android:drawableTop="@drawable/ic_manage_profile"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/theme_red"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="20dp"
+                    android:text="@string/manage_profile"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spHome_btnUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gradient_background"
+                    android:drawableTop="@drawable/ic_upload_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/theme_red"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="20dp"
+                    android:text="Upload user Images and Videos"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="4"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spHome_btnAddServiceArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gradient_background"
+                    android:drawableTop="@drawable/ic_add_area"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/theme_red"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="20dp"
+                    android:text="@string/add_service_area"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spHome_btnManagePhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gradient_background"
+                    android:drawableTop="@drawable/ic_photos"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/theme_red"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="20dp"
+                    android:text="@string/manage_photos"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/spHome_btnVerifyProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gradient_background"
+                    android:drawableTop="@drawable/ic_verify_profile"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/theme_red"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="20dp"
+                    android:text="@string/upload_document"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/spHome_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_grey"
+        android:translationZ="@dimen/cardview_compat_inset_shadow"
+        android:visibility="gone"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
