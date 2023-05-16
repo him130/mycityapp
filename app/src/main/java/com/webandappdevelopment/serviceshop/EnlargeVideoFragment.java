@@ -30,14 +30,7 @@ public class EnlargeVideoFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EnlargeVideoFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static EnlargeVideoFragment newInstance(String param1, String param2) {
         EnlargeVideoFragment fragment = new EnlargeVideoFragment();
@@ -63,25 +56,7 @@ public class EnlargeVideoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_enlarge_video, container, false);
 
-       /* Intent intent = getActivity().getIntent();
-        if (intent.getExtras() != null) {
-            String name =intent.getStringExtra("name");
-        }*/
 
-       /* youTubePlayerView = view.findViewById(R.id.rowEnlarge_youtubePlayer);
-        Bundle bundle = getArguments();
-        String youTubeurl = bundle.getString("url");
-        if (youTubeurl != null){
-            youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
-                @Override
-                public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-                    youTubePlayer.cueVideo(youTubeurl,0);
-                    *//*youTubePlayer.setFullscreen(true);*//*
-                    youTubePlayer.pause();
-
-                }
-            });
-        }*/
 
         return view;
 
